@@ -1,0 +1,97 @@
+<section class="hero is-primary is-bold">
+    <div class="hero-body">
+    <div class="container">
+        <h1 class="title">Sign Up</h1>
+    </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <!-- Signup form-->
+        <form (ngSubmit)="submitForm()" #signupForm="ngForm">
+            <!--First Name-->
+            <div class="field">
+                <label class="label">First Name</label>
+                <input 
+                type="text"
+                name="firstName" 
+                class="input" 
+                [(ngModel)]="firstName" 
+                #firstNameInput="ngModel"
+                required>
+                <div class="help is-error" *ngIf="firstNameInput.invalid && firstNameInput.touched">
+                    Your Name is required.
+                </div>
+            </div>
+            <!--Last Name-->
+            <div class="field">
+                <label class="label">Last Name</label>
+                <input
+                type="text" 
+                name="lastName" 
+                class="input" 
+                [(ngModel)]="lastName"
+                #lastNameInput
+                #firstNameInput="ngModel"
+                required>
+                <div class="help is-error" *ngIf="lastNameInput.invalid && lastNameInput.touched">
+                    Your Last Name is required.
+                </div>
+            </div>
+            <!--User Id-->
+            <div class="field">
+                <label class="label">UserID</label>
+                <input
+                type="text" 
+                name="userID" 
+                class="input" 
+                [(ngModel)]="userID"
+                #idInput="ngModel"
+                required>
+                <div class="help is-error" *ngIf="idInput.invalid && idInput.touched">
+                    A username is required.
+                </div>
+            </div>
+            <!--Password-->
+            <div class="field">
+                <label class="label">Password</label>
+                <input
+                 type="text" 
+                 name="password" 
+                 class="input"
+                 [(ngModel)]="password"
+                 #passInput="ngModel"
+                required>
+                <div class="help is-error" *ngIf="passInput.invalid && passInput.touched">
+                    A Password is required.
+                </div>
+            </div>
+            <!--Email-->
+            <div class="field">
+                <label class="label">Email</label>
+                <input 
+                type="email" 
+                name="email" 
+                class="input" 
+                [(ngModel)]="email"
+                #emailInput="ngModel"
+                required
+                email>
+                <div class="help is-error" *ngIf="emailInput.invalid && emailInput.touched">
+                    Your email is required and needs to be a valid email.
+                </div>
+            </div>
+            <!--Submit button-->
+            <button
+            type="submit" 
+            class="button is-large is-warning"
+            [disabled]="signupForm.invalid">
+               Submit 
+            </button>
+
+
+        </form>
+
+
+    </div>
+</section>
