@@ -9,6 +9,12 @@ import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
 import {ItemService} from './services/item.service';
 import { ItemsComponent } from './items/items.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AddItemComponent } from './components/add-item/add-item.component';
+
 
 @NgModule({
   declarations: [
@@ -17,12 +23,16 @@ import { ItemsComponent } from './items/items.component';
     FooterComponent,
     HomeComponent,
     SignupComponent,
-    ItemsComponent
+    ItemsComponent,
+    NavbarComponent,
+    AddItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase, 'angularfs'),
+    AngularFirestoreModule
 
   ],
   providers: [ItemService],

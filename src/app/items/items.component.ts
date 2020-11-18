@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ItemService} from '../services/item.service';
+import { Item } from '../models/item';
 
 
 @Component({
@@ -8,11 +9,15 @@ import {ItemService} from '../services/item.service';
   styleUrls: ['./items.component.scss']
 })
 export class ItemsComponent implements OnInit {
+  items: Item[];
 
   constructor(private itemService: ItemService) { }
 
-  ngOnInit(): void {
-
+  ngOnInit() {
+    return this.itemService.getItems().subscribe( items => {
+      ///console.log(items)
+      this.items = items;
+    })
   }
 
 }
