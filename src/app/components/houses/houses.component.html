@@ -1,0 +1,15 @@
+<div *ngIf="houses?.length > 0; else noHouses">
+    <ul *ngFor="let house of houses" class ="collection"> 
+        <li (dblclick)="deleteHouse($event, house)" class="collection-house"><Strong>{{house.address}}: </Strong>{{house.neighborhood}}
+        <a href="# class="secondary-content> <i  (click)="editHouse($event, house)" class="fa fa-pencil"></i>
+        </a>
+        </li>
+
+    </ul>
+</div>
+
+
+
+<ng-template #noHouses>
+    <h5>There are no houses with Candy</h5>
+</ng-template>

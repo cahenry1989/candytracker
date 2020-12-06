@@ -14,6 +14,9 @@ import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
+import { HousesComponent } from './components/houses/houses.component';
+import { AddHouseComponent } from './components/add-house/add-house.component';
+import {HouseService} from './services/house.service';
 
 
 @NgModule({
@@ -25,7 +28,9 @@ import { AddItemComponent } from './components/add-item/add-item.component';
     SignupComponent,
     ItemsComponent,
     NavbarComponent,
-    AddItemComponent
+    AddItemComponent,
+    HousesComponent,
+    AddHouseComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,7 @@ import { AddItemComponent } from './components/add-item/add-item.component';
     AngularFirestoreModule
 
   ],
-  providers: [ItemService],
+  providers: [ItemService, HouseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

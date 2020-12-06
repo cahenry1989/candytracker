@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="card-content">  
+        <form (ngSubmit)="onSubmit()" class="col s6">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <label>Neighborhood</label>
+                        <input type="text" placeholder="Add Neighborhood" [(ngModel)]= "house.neighborhood"
+                        name="Neighborhood">
+                        
+                        <label>Address</label>
+                        <input type="text" placeholder="Add Address" [(ngModel)]= "house.address"
+                        name="Address">
+                        
+                        <label>City</label>
+                        <input type="text" placeholder="city " [(ngModel)]= "house.city"
+                        name="City">
+                        
+                        <label>State</label>
+                        <input type="text" placeholder="Add State" [(ngModel)]= "house.state"
+                        name="State">
+                        
+                        <label>Zipcode</label>
+                        <input type="text" placeholder="Add Zipcode" [(ngModel)]= "house.zipcode"
+                        name="Zipcode">
+                        
+                        <label>Has Candy</label>
+                        <input type="boolean" placeholder="Has Candy" [(ngModel)]= "house.hasCandy"
+                        name="Has Candy">
+                        
+                    </div>
+                    <input type="submit" value="Submit" class="btn">
+                </div>
+
+        </form>
+    </div>
+</div>
