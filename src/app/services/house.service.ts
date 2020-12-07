@@ -19,7 +19,7 @@ export class HouseService {
     this.houses = this.housesCollection.snapshotChanges().pipe(map(changes => {
       return changes.map( a=> {
         const data = a.payload.doc.data() as House;
-        data.address = a.payload.doc.id;
+        data.id = a.payload.doc.id;
         return data;
       });
     }))
