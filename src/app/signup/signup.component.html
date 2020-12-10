@@ -16,7 +16,7 @@
                 type="text"
                 name="firstName" 
                 class="input" 
-                [(ngModel)]="firstName" 
+                [(ngModel)]="user.firstName" 
                 #firstNameInput="ngModel"
                 required>
                 <div class="help is-error" *ngIf="firstNameInput.invalid && firstNameInput.touched">
@@ -30,7 +30,7 @@
                 type="text" 
                 name="lastName" 
                 class="input" 
-                [(ngModel)]="lastName"
+                [(ngModel)]="user.lastName"
                 #lastNameInput
                 #firstNameInput="ngModel"
                 required>
@@ -45,7 +45,7 @@
                 type="text" 
                 name="userID" 
                 class="input" 
-                [(ngModel)]="userID"
+                [(ngModel)]="user.userID"
                 #idInput="ngModel"
                 required>
                 <div class="help is-error" *ngIf="idInput.invalid && idInput.touched">
@@ -59,7 +59,7 @@
                  type="text" 
                  name="password" 
                  class="input"
-                 [(ngModel)]="password"
+                 [(ngModel)]="user.password"
                  #passInput="ngModel"
                 required>
                 <div class="help is-error" *ngIf="passInput.invalid && passInput.touched">
@@ -73,7 +73,7 @@
                 type="email" 
                 name="email" 
                 class="input" 
-                [(ngModel)]="email"
+                [(ngModel)]="user.email"
                 #emailInput="ngModel"
                 required
                 email>
@@ -91,7 +91,5 @@
 
 
         </form>
-
-
     </div>
 </section>

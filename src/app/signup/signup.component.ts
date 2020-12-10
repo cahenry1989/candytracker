@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SignupService } from '../services/signup.service';
+import { User } from '../models/signup';
 
 @Component({
   selector: 'app-signup',
@@ -6,22 +8,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-  firstName: string;
-  lastName: string;
-  email: string;
-  userID: string;
-  password: string;
+  
 
-  constructor() { }
+  user: User = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    userID: '',
+    password: ''
+    
+  } 
+  constructor(private userService: SignupService) { }
 
   ngOnInit(): void {
   }
 
-  submitForm() {
-    const message = `My Name  ${this.firstName}`;
-    alert(message);
-
-    
+  submitForm(){
+    if(this.user.firstName != '' && this.user.lastName != '' && this.user.userID != '' && this.user.password != '' && this.user.email != ''){
+      this.userService.addUser(this.user);
+      this.user.firstName = '';
+      this.user.lastName ='';
+      this.user.userID='';
+      this.user.password='';
+      this.user.email='';
+    }
   }
 
 }
+
+

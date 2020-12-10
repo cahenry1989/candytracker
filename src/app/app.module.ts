@@ -17,6 +17,8 @@ import { AddItemComponent } from './components/add-item/add-item.component';
 import { HousesComponent } from './components/houses/houses.component';
 import { AddHouseComponent } from './components/add-house/add-house.component';
 import {HouseService} from './services/house.service';
+import { AddUserComponent } from './components/add-user/add-user.component';
+import { SignupService } from './services/signup.service';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import {HouseService} from './services/house.service';
     NavbarComponent,
     AddItemComponent,
     HousesComponent,
-    AddHouseComponent
+    AddHouseComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,7 @@ import {HouseService} from './services/house.service';
     AngularFirestoreModule
 
   ],
-  providers: [ItemService, HouseService],
+  providers: [ItemService, HouseService, SignupService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
