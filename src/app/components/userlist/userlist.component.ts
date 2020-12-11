@@ -19,7 +19,7 @@ export class UserlistComponent implements OnInit {
     })
   }
 
-  deleteHouse(event, user){
+  deleteUser(event, user){
     this.userService.deleteUser(user);
   }
 

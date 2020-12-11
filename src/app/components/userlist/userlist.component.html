@@ -1,6 +1,7 @@
+<h1>Who has signed up?</h1> 
 <div *ngIf="users?.length > 0; else noUsers">
-    <ul *ngFor="let house of users" class ="collection"> 
-        <li (dblclick)="deleteUser($event, house)" class="collection-house"><Strong>{{user.firstName}}: </Strong>{{user.lastName}}
+    <ul *ngFor="let user of users" class ="collection">
+        <li (dblclick)="deleteUser($event, user)" class="collection-user"> <Strong>First Name:</Strong> {{user.firstName}} <Strong>Last Name:</Strong> {{user.lastName}}   <strong>UserID: </strong> {{user.userID}}
         <a href="# class="secondary-content> <i  (click)="editUser($event, user)" class="fa fa-pencil"></i>
         </a>
         </li>

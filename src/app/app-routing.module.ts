@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddHouseComponent } from './components/add-house/add-house.component';
 import { HousesComponent } from './components/houses/houses.component';
+import { UserlistComponent } from './components/userlist/userlist.component';
 import { HomeComponent } from './home/home.component';
 import { ItemsComponent } from './items/items.component';
 import { LoginComponent } from './login/login.component';
@@ -36,7 +37,7 @@ const routes: Routes = [
 },
 {
   path: 'userlist',
-  component: UserListComponent,
+  component: UserlistComponent,
 }
 
 ];
