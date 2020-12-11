@@ -1,0 +1,15 @@
+<div *ngIf="users?.length > 0; else noUsers">
+    <ul *ngFor="let house of users" class ="collection"> 
+        <li (dblclick)="deleteUser($event, house)" class="collection-house"><Strong>{{user.firstName}}: </Strong>{{user.lastName}}
+        <a href="# class="secondary-content> <i  (click)="editUser($event, user)" class="fa fa-pencil"></i>
+        </a>
+        </li>
+
+    </ul>
+</div>
+
+
+
+<ng-template #noUsers>
+    <h5>There are no users signed up</h5>
+</ng-template>

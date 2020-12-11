@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ItemsComponent } from './items/items.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { UserListComponent } from './users/user-list/user-list.component';
 
 const routes: Routes = [
 {
@@ -32,6 +33,10 @@ const routes: Routes = [
 {
   path: 'addhouses',
   component: AddHouseComponent,
+},
+{
+  path: 'userlist',
+  component: UserListComponent,
 }
 
 ];

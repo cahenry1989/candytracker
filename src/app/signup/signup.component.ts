@@ -24,7 +24,7 @@ export class SignupComponent implements OnInit {
   }
 
   submitForm(){
-    if(this.user.firstName != '' && this.user.lastName != '' && this.user.userID != '' && this.user.password != '' && this.user.email != ''){
+    if(this.user.firstName != '' && this.user.lastName != '' && this.user.userID != '' && this.user.password != '' ){
       this.userService.addUser(this.user);
       this.user.firstName = '';
       this.user.lastName ='';

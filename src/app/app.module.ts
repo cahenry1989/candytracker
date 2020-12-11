@@ -19,6 +19,7 @@ import { AddHouseComponent } from './components/add-house/add-house.component';
 import {HouseService} from './services/house.service';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { SignupService } from './services/signup.service';
+import { UserlistComponent } from './components/userlist/userlist.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { SignupService } from './services/signup.service';
     AddItemComponent,
     HousesComponent,
     AddHouseComponent,
-    AddUserComponent
+    AddUserComponent,
+    UserlistComponent
   ],
   imports: [
     BrowserModule,

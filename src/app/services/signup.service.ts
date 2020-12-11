@@ -34,7 +34,7 @@ export class SignupService {
    }
 
    deleteUser(user: User){
-   this.userDoc =this.afs.doc(`userss/${user.lastName}`);
+   this.userDoc =this.afs.doc(`users/${user.lastName}`);
    this.userDoc.delete();
   }
 }
